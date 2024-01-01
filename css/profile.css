@@ -1,0 +1,8 @@
+.profile .profile-container .container-wrapper {
+  max-width: 488px; 
+}
+.profile .profile-container .container-wrapper .profile-avatar {
+  width: 120px; height: 120px
+}
+
+

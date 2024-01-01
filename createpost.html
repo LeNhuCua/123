@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/create.css" />
+
+    <title>Pinterest</title>
+
+    <!-- Stylesheet  -->
+  </head>
+
+  <body class="position-relative">
+    <div id="overlay"></div>
+
+    <header
+      id="header"
+      class="navbar navbar-expand bg-white sticky-top flex-md-row bd-navbar d-none d-lg-flex"
+    >
+      <div class="logo d-flex align-items-center justify-content-center">
+        <a class="navbar-brand mr-0" href="/">
+          <svg
+            fill="#e60023"
+            class="svgGraphic color-text-icon-brand-primaryU9O kVc"
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            aria-label=""
+            role="img"
+          >
+            <path
+              d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12"
+            ></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="navbar-nav-scroll nav-bar-button-left">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item d-flex align-items-center active mr-2">
+            <a class="nav-link" href="/createpost.html">Create</a>
+          </li>
+        </ul>
+      </div>
+      <div
+        style="position: relative"
+        class="py-2 flex-grow-1 flex-shrink-1 flex-basis-auto search-box pr-2"
+      >
+        <div class="flex-grow-1 search-item">
+          <div class="h-100 d-flex align-items-center px-0 px-4">
+            <div class="mr-2">
+              <i class="fas fa-search fs-16" id="searchIcon"></i>
+            </div>
+            <div class="h-100 flex-grow-1">
+              <input
+                type="text"
+                class="search h-100 w-100 fs-16 border-0 font-weight-normal"
+                placeholder="Search"
+                id="searchInput"
+              />
+            </div>
+            <i class="fas fa-times-circle" id="searchCloseIcon"></i>
+          </div>
+
+          <div
+            style="display: none"
+            id="searchResults"
+            class="position-absolute bg-white p-4 w-100 rounded-lg"
+          >
+            <div class="container-fuild earch-results-content">
+              <div class="search-ideas">
+                <span class="fs-16">Ideas for you</span>
+                <div class="row gap-2 mt-3 search-ideas-list">
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear1.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear2.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear3.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear4.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="search-ideas">
+                <span class="fs-16">Popular on Pinterest</span>
+                <div class="row gap-2 mt-3 search-ideas-list">
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear5.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear6.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear1.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear2.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ideas-item">
+                    <div class="card">
+                      <div class="row no-gutters h-100">
+                        <div class="col-md-4">
+                          <img
+                            src="./images/idear/idear4.jpg"
+                            class="card-img h-100"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="searchResultsValue"
+            class="position-absolute bg-white w-100 rounded-lg"
+            style="display: none"
+          >
+            <div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <a
+                    href=""
+                    class="w-100 h-100 d-block d-flex align-items-center"
+                  >
+                    <div class="box-icon">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <span class="ml-2 d-block">Dapibus ac facilisis in</span>
+                  </a>
+                </li>
+
+                <li class="list-group-item profile">
+                  <a
+                    href=""
+                    class="w-100 h-100 d-block d-flex align-items-center"
+                  >
+                    <div class="box-icon">
+                      <img
+                        class="rounded-circle w-100 h-100"
+                        src="https://limody.vn/wp-content/uploads/2020/12/mon-ngon-quang-binh-22.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ml-2">
+                      <span class="d-block font-weight-bold"
+                        >Dapibus ac facilisis in</span
+                      >
+                      <span class="fs-12">People</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="list-group-item">
+                  <a
+                    href=""
+                    class="w-100 h-100 d-block d-flex align-items-center"
+                  >
+                    <div class="box-icon">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <span class="ml-2 d-block fs-16"
+                      >Dapibus ac facilisis in</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="search-value-bottom">
+              <hr class="dropdown-divider" />
+              <div class="py-3 d-flex justify-content-between btn-list">
+                <span class="fs-16">Looking for ideas you saved?</span>
+                <button class="btn">Search your Pín</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav button-nav-container ml-md-auto">
+        <li class="nav-item dropdown">
+          <button
+            class="d-flex align-items-center justify-content-center btn nav-link rounded-circle"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+              <i class="fas fa-bell fs-24"></i>
+            </a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-md-right">
+            <a class="dropdown-item" href="/login.html">Thông báo</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <button
+            class="d-flex align-items-center justify-content-center btn nav-link rounded-circle"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+              <i class="far fa-comment-dots fs-24"></i>
+            </a>
+          </button>
+          <div class="dropdown-menu dropdown-menu-md-right chat-wrapper">
+            <div class="position-relative bg-white chat-container">
+              <div class="heading text-center">Inbox</div>
+              <div class="search-container">
+                <div class="search-item">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Search by name or email" />
+                </div>
+              </div>
+
+              <ul class="chat-btn">
+                <li class="new p-2 mt-3">
+                  <a href="" class="d-flex align-items-center">
+                    <div class="box-icon rounded-circle mr-2">
+                      <i class="fas fa-edit"></i>
+                    </div>
+                    <span>New message</span>
+                  </a>
+                </li>
+                <li class="new p-2 mt-3">
+                  <a href="" class="d-flex align-items-center">
+                    <div class="box-icon rounded-circle mr-2">
+                      <i class="fas fa-edit"></i>
+                    </div>
+                    <span>New message</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div
+            class="nav-item-avatar d-flex align-items-center justify-content-center btn nav-link rounded-circle"
+          >
+            <a
+              class="nav-link px-1 mx-1 py-3 my-n2 dl-block"
+              href="profile.html"
+              rel="noopener"
+              aria-label="Open Collective"
+            >
+              <img
+                class="rounded-circle"
+                src="https://i.pinimg.com/75x75_RS/67/df/95/67df950f6046a26e2b26003fd77a3725.jpg"
+                alt=""
+                srcset=""
+              />
+            </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <button
+            class="d-flex align-items-center justify-content-center btn nav-link rounded-circle"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+              <i class="fas fa-chevron-down"></i>
+            </a>
+          </button>
+
+          <div class="dropdown-menu dropdown-menu-md-right profile-wrapper">
+            <div class="position-absolute bg-white profile-container">
+              <div class="currently">Currently in</div>
+              <a
+                href="#"
+                class="d-flex align-items-center account justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="account-img">
+                    <img
+                      class="w-100 h-100 rounded-circle"
+                      src="https://i.pinimg.com/75x75_RS/67/df/95/67df950f6046a26e2b26003fd77a3725.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="d-flex flex-column ml-2 account-detail">
+                    <span class="name">Như Của</span>
+                    <span class="des">Personal</span>
+                    <span class="des">profile.html@gmail.com</span>
+                  </div>
+                </div>
+
+                <div>
+                  <svg
+                    height="12"
+                    width="12"
+                    viewBox="0 0 24 24"
+                    aria-label="Selected item"
+                    role="img"
+                  >
+                    <path
+                      d="M9.17 21.75.73 12.79c-.97-1.04-.97-2.71 0-3.75a2.403 2.403 0 0 1 3.53 0l4.91 5.22L19.74 3.03c.98-1.04 2.55-1.04 3.53 0 .97 1.03.97 2.71 0 3.74L9.17 21.75z"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+              <a href="logout" class="px-2 d-block w-100 logout"> Log Out </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+
+    <!-- End Main Header -->
+
+    <!-- Body -->
+
+    <!-- bottom tab -->
+    <nav class="nav navbar-expand bg-primary text-white fixed-bottom d-lg-none">
+      <ul class="navbar-nav nav-justified w-100">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Create</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- end bottom tab -->
+
+    <main class="p-0">
+      <section class="create-post">
+        <div id="mySidebar" class="sidebar">
+          <div id="tab-active" class="position-relative h-100 w-100">
+            <div
+              class="d-flex justify-content-between align-items-center padding-y-8"
+            >
+              <div class="heading padding-y-8">
+                Pin drafts <span class="color-text-subtle">(3)</span>
+              </div>
+              <div
+                onclick="openNav()"
+                class="box-48 d-flex justify-content-between align-items-center btn rounded-circle"
+              >
+                <svg
+                  class="gUZ R19 U9O kVc"
+                  height="20"
+                  width="20"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  aria-label=""
+                  role="img"
+                >
+                  <path
+                    d="M19.4848 20.5516L12.0949 13.0822C11.9283 12.9273 11.8096 12.7616 11.7387 12.5852C11.6679 12.4088 11.6324 12.2234 11.6324 12.0288C11.6324 11.8343 11.6679 11.6425 11.7387 11.4535C11.8096 11.2645 11.9283 11.0925 12.0949 10.9375L19.4848 3.4302C19.779 3.13128 20.1247 2.98813 20.5217 3.00077C20.9187 3.01341 21.2644 3.16919 21.5586 3.46812C21.8529 3.76704 22 4.11818 22 4.52153C22 4.92487 21.8529 5.27601 21.5586 5.57494L15.2057 12.0288L21.5586 18.4827C21.8529 18.7816 21.9965 19.1264 21.9895 19.5172C21.9824 19.9079 21.8388 20.2527 21.5586 20.5516C21.2503 20.8505 20.9012 21 20.5112 21C20.1212 21 19.779 20.8505 19.4848 20.5516ZM9.85231 20.5516L2.46246 13.0822C2.29585 12.9273 2.17712 12.7616 2.10626 12.5852C2.03542 12.4088 2 12.2234 2 12.0288C2 11.8343 2.03542 11.6425 2.10626 11.4535C2.17712 11.2645 2.29585 11.0925 2.46246 10.9375L9.85231 3.4302C10.1466 3.13128 10.4922 2.98813 10.8892 3.00077C11.2863 3.01341 11.6319 3.16919 11.9262 3.46812C12.2204 3.76704 12.3676 4.11818 12.3676 4.52153C12.3676 4.92487 12.2204 5.27601 11.9262 5.57494L5.55217 12.0288L11.9262 18.4827C12.2204 18.7816 12.364 19.1264 12.357 19.5172C12.35 19.9079 12.2064 20.2527 11.9262 20.5516C11.6178 20.8505 11.2687 21 10.8787 21C10.4887 21 10.1466 20.8505 9.85231 20.5516Z"
+                    data-selected="true"
+                    data-label-id="0"
+                    contenteditable="true"
+                    spellcheck="true"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <button class="btn-primary w-100">Create New</button>
+
+            <div class="border-bottom padding-y-8"></div>
+            <div
+              class="flex-column d-flex gap-8 padding-y-24 nav-list-container"
+            >
+              <div class="padding-y-8 padding-x-8 active post-nav radius-12">
+                <div
+                  class="d-flex justify-content-between align-items-center justify-content-between"
+                >
+                  <div class="d-flex align-items-center gap-12">
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                    </div>
+
+                    <!-- <input  style="width: 16px;height: 16px;border-radius: 120px; "  type="checkbox" /> -->
+                    <div class="box-72">
+                      <img
+                        class="h-100 w-100 radius-12"
+                        src="https://tse1.mm.bing.net/th?id=OIP.MF39RVF-sqvQ6eUvl7OYNwHaEK&pid=Api&P=0&h=180"
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span
+                        class="color-text-default break-word font-weight-bold"
+                        >expiration
+                      </span>
+                      <span class="color-text-subtle">30 day expiration</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="btn rounded-circle d-flex justify-content-between align-items-center box-40 relative"
+                  >
+                    <div class="dropdownBtn">
+                      <svg
+                        class="gUZ R19 U9O kVc"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        aria-label=""
+                        role="img"
+                      >
+                        <path
+                          d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                        ></path>
+                      </svg>
+                    </div>
+
+                    <div class="dropdown-content">
+                      <button>Duplicate</button>
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="padding-y-8 padding-x-8 post-nav radius-12">
+                <div
+                  class="d-flex justify-content-between align-items-center justify-content-between"
+                >
+                  <div class="d-flex align-items-center gap-12">
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                    </div>
+
+                    <!-- <input  style="width: 16px;height: 16px;border-radius: 120px; "  type="checkbox" /> -->
+                    <div class="box-72">
+                      <img
+                        class="h-100 w-100 radius-12"
+                        src="https://tse1.mm.bing.net/th?id=OIP.MF39RVF-sqvQ6eUvl7OYNwHaEK&pid=Api&P=0&h=180"
+                        alt=""
+                      />
+                    </div>
+                    <div class="d-flex flex-column">
+                      <span
+                        class="color-text-default break-word font-weight-bold"
+                        >expiration
+                      </span>
+                      <span class="color-text-subtle">30 day expiration</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="btn rounded-circle d-flex justify-content-between align-items-center box-40 relative"
+                  >
+                    <div class="dropdownBtn">
+                      <svg
+                        class="gUZ R19 U9O kVc"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        aria-label=""
+                        role="img"
+                      >
+                        <path
+                          d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"
+                        ></path>
+                      </svg>
+                    </div>
+
+                    <div class="dropdown-content">
+                      <button>Duplicate</button>
+                      <button>Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="padding-y-24 w-100 position-absolute d-flex align-items-center bg-white border-top nav-bottom"
+            >
+              <div class="checkbox mr-2">
+                <input id="checkbox" type="checkbox" />
+              </div>
+              <label for="checkbox">Selected all</label>
+            </div>
+          </div>
+
+          <div
+            id="abc"
+            style="display: none"
+            class="position-relative h-100 w-100"
+          >
+            <div
+              onclick="openNav()"
+              class="box-48 d-flex justify-content-between align-items-center btn rounded-circle"
+            >
+              <svg
+                class="gUZ R19 U9O kVc"
+                height="20"
+                width="20"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                aria-label=""
+                role="img"
+              >
+                <path
+                  d="M4.51524 20.5516L11.9051 13.0822C12.0717 12.9273 12.1904 12.7616 12.2613 12.5852C12.3321 12.4088 12.3676 12.2234 12.3676 12.0288C12.3676 11.8343 12.3321 11.6425 12.2613 11.4535C12.1904 11.2645 12.0717 11.0925 11.9051 10.9375L4.51524 3.4302C4.22096 3.13128 3.87532 2.98813 3.47831 3.00077C3.08127 3.01341 2.73563 3.16919 2.44138 3.46812C2.14713 3.76704 2 4.11818 2 4.52153C2 4.92487 2.14713 5.27601 2.44138 5.57494L8.7943 12.0288L2.44138 18.4827C2.14713 18.7816 2.00351 19.1264 2.01052 19.5172C2.01757 19.9079 2.16118 20.2527 2.44138 20.5516C2.74969 20.8505 3.09884 21 3.48883 21C3.87883 21 4.22096 20.8505 4.51524 20.5516ZM14.1477 20.5516L21.5375 13.0822C21.7041 12.9273 21.8229 12.7616 21.8937 12.5852C21.9646 12.4088 22 12.2234 22 12.0288C22 11.8343 21.9646 11.6425 21.8937 11.4535C21.8229 11.2645 21.7041 11.0925 21.5375 10.9375L14.1477 3.4302C13.8534 3.13128 13.5078 2.98813 13.1108 3.00077C12.7137 3.01341 12.3681 3.16919 12.0738 3.46812C11.7796 3.76704 11.6324 4.11818 11.6324 4.52153C11.6324 4.92487 11.7796 5.27601 12.0738 5.57494L18.4478 12.0288L12.0738 18.4827C11.7796 18.7816 11.636 19.1264 11.643 19.5172C11.65 19.9079 11.7936 20.2527 12.0738 20.5516C12.3822 20.8505 12.7313 21 13.1213 21C13.5113 21 13.8534 20.8505 14.1477 20.5516Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div id="main">
+          <div class="create-container-main">
+            <div
+              class="d-flex justify-content-between align-items-center padding-x-12 top-nav"
+            >
+              <div class="heading font-weight-bold fs-24">Create Pin</div>
+              <div class="d-flex align-items-center">
+                <span>Saving...</span>
+                <button class="SaveButton__background--enabled ml-3">
+                  Publish
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <div class="d-flex justify-content-center padding-y-24">
+                <div class="create-post-wrapper">
+                  <div class="container-fuild">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div
+                          class="d-flex justify-content-center align-items-center position-relative radius-24 post-loader"
+                        >
+                          <input
+                            onchange="loadFile(event)"
+                            class="position-absolute radius-24 w-100 h-100 bg-transparent"
+                            type="file"
+                          />
+                          <div
+                            class="position-absolute post-image-overlate radius-24 d-flex align-items-center justify-content-center w-100 h-100"
+                          >
+                            <div
+                              class="d-flex flex-column align-items-center justify-content-center"
+                            >
+                              <div style="font-size: 32px">
+                                <i class="fas fa-chevron-circle-up"></i>
+                              </div>
+                              <div class="mt-2">
+                                <p>Choose a file or drag and drop it here</p>
+                              </div>
+                            </div>
+                            <img
+                              id="output"
+                              class="w-100 left-0 h-100 top-0 position-absolute radius-24"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="padding-y-24">
+                          <div class="border-bottom"></div>
+                          <div class="padding-y-24">
+                            <button class="btn-primary w-100 d-block">
+                              Save from url
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8">
+                        <div>
+                          <form>
+                            <div class="mb-3">
+                              <label for="Title" class="form-label"
+                                >Title</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Add a title"
+                                id="Title"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label for="Description" class="form-label"
+                                >Description</label
+                              >
+                              <textarea
+                                class="form-control"
+                                id="Description"
+                                rows="3"
+                              ></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="Title" class="form-label">Link</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Add a title"
+                                id="Link"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label for="Title" class="form-label"
+                                >Board</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Add a title"
+                                id="Board"
+                              />
+                            </div>
+                            <div class="mb-3">
+                              <label for="Title" class="form-label"
+                                >Board</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Tagged topics (0)"
+                                id="Board"
+                              />
+                            </div>
+
+                            <div class="accordion mt-4">
+                              <div class="accordion-item">
+                                <div class="accordion-header">
+                                  <span>More options</span>
+                                  <i
+                                    style="float: none"
+                                    class="fas fa-chevron-down"
+                                  ></i>
+                                </div>
+                                <div class="accordion-content pt-2 pl-0">
+                                  <div class="d-flex align-items-center">
+                                    <div class="checkbox-wrapper mr-2">
+                                      <input
+                                        class="checkbox-custom checkbox-check"
+                                        id="id"
+                                        type="checkbox"
+                                      />
+                                      <label
+                                        class="checkbox-custom-btn"
+                                        for="id"
+                                      ></label>
+                                    </div>
+                                    <label for="id">
+                                      Allow people to comment</label
+                                    >
+                                  </div>
+                                  <div class="d-flex align-items-center mt-3">
+                                    <div class="checkbox-wrapper mr-2">
+                                      <input
+                                        class="checkbox-custom checkbox-check"
+                                        id="id1"
+                                        type="checkbox"
+                                      />
+                                      <label
+                                        class="checkbox-custom-btn"
+                                        for="id1"
+                                      ></label>
+                                    </div>
+                                    <label for="id1"
+                                      >Show similar products</label
+                                    >
+                                  </div>
+
+                                  <p class="mt-2">
+                                    Shopping recommendations aren't available
+                                    for Idea ads and Pins with tagged products
+                                    or paid partnership label
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- End PageWrapper -->
+    <script>
+      var loadFile = function (event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      };
+      function openNav() {
+        document.getElementById('mySidebar').classList.toggle('active');
+        document.getElementById('tab-active').classList.toggle('active');
+        document.getElementById('abc').classList.toggle('active');
+        document.getElementById('main').classList.toggle('active');
+      }
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

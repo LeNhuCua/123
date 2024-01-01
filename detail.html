@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+    <title>Pinterest</title>
+
+    <!-- Stylesheet  -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Main Header -->
+      <header
+        id="header"
+        class="navbar navbar-expand bg-white sticky-top flex-md-row bd-navbar d-none d-lg-flex"
+      >
+        <div class="logo d-flex align-items-center justify-content-center">
+          <a class="navbar-brand mr-0" href="/">
+            <svg
+              fill="#e60023"
+              class="svgGraphic color-text-icon-brand-primaryU9O kVc"
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              aria-label=""
+              role="img"
+            >
+              <path
+                d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="navbar-nav-scroll nav-bar-button-left">
+          <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item d-flex align-items-center active mr-2">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <a class="nav-link" href="/createpost.html">Create</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          style="position: relative"
+          class="py-2 flex-grow-1 flex-shrink-1 flex-basis-auto search-box pr-2"
+        >
+          <div class="flex-grow-1 search-item">
+            <div class="h-100 d-flex align-items-center px-0 px-4">
+              <div class="mr-2">
+                <i class="fas fa-search fs-16" id="searchIcon"></i>
+              </div>
+              <div class="h-100 flex-grow-1">
+                <input
+                  type="text"
+                  class="search h-100 w-100 fs-16 border-0 font-weight-normal"
+                  placeholder="Search"
+                  id="searchInput"
+                />
+              </div>
+              <i class="fas fa-times-circle" id="searchCloseIcon"></i>
+            </div>
+            <!-- 
+            <div class="position-absolute bg-primary card-body-overlay">
+              <div class="container-fuild px-3">
+                <h1>Ideas for you</h1>
+                <div class="row gap-2">
+                
+                  <div class="col-md-3">
+                    <div style="border-radius: 24px" class="card">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                        
+                          <img
+                            style="
+                              border-top-left-radius: 24px;
+                              border-bottom-left-radius: 24px;
+                            "
+                            src="https://i.pinimg.com/564x/67/09/90/670990618711c3631bc150c376559c07.jpg"
+                            class="card-img"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                        
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div style="border-radius: 24px" class="card">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                          
+                          <img
+                            style="
+                              border-top-left-radius: 24px;
+                              border-bottom-left-radius: 24px;
+                            "
+                            src="https://i.pinimg.com/564x/67/09/90/670990618711c3631bc150c376559c07.jpg"
+                            class="card-img"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                         
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div style="border-radius: 24px" class="card">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                        
+                          <img
+                            style="
+                              border-top-left-radius: 24px;
+                              border-bottom-left-radius: 24px;
+                            "
+                            src="https://i.pinimg.com/564x/67/09/90/670990618711c3631bc150c376559c07.jpg"
+                            class="card-img"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                        
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div style="border-radius: 24px" class="card">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                        
+                          <img
+                            style="
+                              border-top-left-radius: 24px;
+                              border-bottom-left-radius: 24px;
+                            "
+                            src="https://i.pinimg.com/564x/67/09/90/670990618711c3631bc150c376559c07.jpg"
+                            class="card-img"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                      
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div style="border-radius: 24px" class="card">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                       
+                          <img
+                            style="
+                              border-top-left-radius: 24px;
+                              border-bottom-left-radius: 24px;
+                            "
+                            src="https://i.pinimg.com/564x/67/09/90/670990618711c3631bc150c376559c07.jpg"
+                            class="card-img"
+                            alt="Ảnh"
+                          />
+                        </div>
+                        <div class="col-md-8 d-flex align-items-center">
+                        
+                          <div class="card-body">
+                            <p class="card-text font-weight-bold">Flower.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            / -->
+          </div>
+        </div>
+
+        <ul class="navbar-nav button-nav-container ml-md-auto">
+          <li class="nav-item dropdown">
+            <button
+              class="d-flex align-items-center justify-content-center btn nav-link mr-md-2 rounded-circle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+                <i class="fas fa-bell fs-24"></i>
+              </a>
+            </button>
+            <div class="dropdown-menu dropdown-menu-md-right">
+              <a class="dropdown-item" href="/login.html">Login</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <button
+              class="d-flex align-items-center justify-content-center btn nav-link mr-md-2 rounded-circle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+                <i class="far fa-comment-dots fs-24"></i>
+              </a>
+            </button>
+            <div class="dropdown-menu dropdown-menu-md-right">
+              <a class="dropdown-item" href="/docs/versions/">
+                <div class="card card-margin">
+                  <div class="card-header no-border">
+                    <h5 class="card-title">MOM</h5>
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="widget-49">
+                      <div class="widget-49-title-wrapper">
+                        <div class="widget-49-date-primary">
+                          <span class="widget-49-date-day">09</span>
+                          <span class="widget-49-date-month">apr</span>
+                        </div>
+                        <div class="widget-49-meeting-info">
+                          <span class="widget-49-pro-title"
+                            >PRO-08235 DeskOpe. Website</span
+                          >
+                          <span class="widget-49-meeting-time"
+                            >12:00 to 13.30 Hrs</span
+                          >
+                        </div>
+                      </div>
+                      <ol class="widget-49-meeting-points">
+                        <li class="widget-49-meeting-item">
+                          <span>Expand module is removed</span>
+                        </li>
+                        <li class="widget-49-meeting-item">
+                          <span>Data migration is in scope</span>
+                        </li>
+                        <li class="widget-49-meeting-item">
+                          <span>Session timeout increase to 30 minutes</span>
+                        </li>
+                      </ol>
+                      <div class="widget-49-meeting-action">
+                        <a href="#" class="btn btn-sm btn-flash-border-primary"
+                          >View All</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div
+              class="nav-item-avatar d-flex align-items-center justify-content-center btn nav-link mr-md-2 rounded-circle"
+            >
+              <a
+                class="nav-link px-1 mx-1 py-3 my-n2 dl-block"
+                href="profile.html"
+                rel="noopener"
+                aria-label="Open Collective"
+              >
+                <img
+                  class="rounded-circle"
+                  src="https://i.pinimg.com/75x75_RS/67/df/95/67df950f6046a26e2b26003fd77a3725.jpg"
+                  alt=""
+                  srcset=""
+                />
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <button
+              class="d-flex align-items-center justify-content-center btn nav-link mr-md-2 rounded-circle"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <a class="navbar-brand mr-0" href="/" aria-label="Bootstrap">
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </button>
+            <div class="dropdown-menu dropdown-menu-md-right">
+              <a class="dropdown-item" href="/docs/versions/">All versions</a>
+            </div>
+          </li>
+        </ul>
+      </header>
+
+      <!-- End Main Header -->
+
+      <!-- Body -->
+      <nav
+        class="nav navbar-expand bg-primary text-white fixed-bottom d-lg-none"
+      >
+        <ul class="navbar-nav nav-justified w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <div class="w-100 justify-content-center d-flex detail-wrapper">
+          <div class="container-fuild">
+            <div class="detail-container">
+              <div class="row">
+                <div class="col-xl-6 col-12 w-100">
+                  <div class="position-relative detail-left">
+                    <img
+                      class="mw-100"
+                      src="https://i.pinimg.com/564x/cd/3e/96/cd3e96f301f4fb48aedd1cc16a2929a0.jpg"
+                      alt=""
+                    />
+                    <div class="position-absolute btn-view-image">
+                      <span
+                        class="d-flex align-items-center justify-content-center"
+                        >View Image</span
+                      >
+                    </div>
+
+                    <div
+                      class="btn-view-show position-absolute align-items-center d-flex justify-content-center text-center"
+                    >
+                      <svg
+                        class="svgGraphic color-text-icon-default U9O kVc"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        aria-label=""
+                        role="img"
+                        data-selected="true"
+                        data-label-id="0"
+                        data-metatip="true"
+                      >
+                        <path
+                          d="M19 1h-3v2h3c1.103 0 2 .897 2 2v3h2V5c0-2.206-1.794-4-4-4zm2 18c0 1.103-.897 2-2 2h-3v2h3c2.206 0 4-1.794 4-4v-3h-2zM3 19v-3H1v3c0 2.206 1.794 4 4 4h3v-2H5c-1.103 0-2-.897-2-2zM3 5c0-1.103.897-2 2-2h3V1H5C2.794 1 1 2.794 1 5v3h2zm6 6.5C9 10.122 10.122 9 11.5 9s2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5S9 12.878 9 11.5zm7.5 6.5a1.502 1.502 0 0 0 1.061-2.561l-2.012-2.011A4.444 4.444 0 0 0 16 11.5C16 9.019 13.981 7 11.5 7S7 9.019 7 11.5 9.019 16 11.5 16c.693 0 1.341-.17 1.928-.451l2.011 2.012c.293.293.677.439 1.061.439z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-12 w-100 scroll-detail-container">
+                  <div
+                    class="d-flex justify-content-between align-items-center detail-right"
+                  >
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="rounded-circle box-icon">
+                        <i class="fas fa-upload"></i>
+                      </div>
+                      <div class="rounded-circle box-icon">
+                        <i class="fas fa-ellipsis-h"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex gap-2 top-bar justify-content-between align-items-center p-2 rounded-3"
+                    >
+                      <p class="text-white fw-bold cursor-pointer fs-16">
+                        Profile
+                      </p>
+
+                      <a
+                        class="text-white fw-bold px-4 rounded-3 fs-16 ml-3 btn"
+                      >
+                        Save
+                      </a>
+                    </div>
+                  </div>
+                  <div class="detail-link">
+                    <a class="fs-16" href="##">meowwwwq.tumblr.com</a>
+                  </div>
+                  <div class="name my-3">
+                    <a class="fs-28" href=""
+                      >Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit.</a
+                    >
+                  </div>
+                  <div class="description">
+                    <p class="fs-16" href="">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Fugit cum, non amet sunt voluptates quidem quis cumque
+                      facilis eveniet excepturi quasi architecto porro fugiat
+                      assumenda est explicabo dolorem distinctio alias!
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <div class="d-flex align-items-center profile">
+                      <div class="box-icon">
+                        <img
+                          class="rounded-circle w-100 h-100"
+                          src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="d-flex flex-column ml-2 profile-des">
+                        <span class="fs-14">丽仙 _hhs_</span>
+                        <span class="mt-1 fs-14">361 followers_</span>
+                      </div>
+                    </div>
+                    <div class="profile-button-list mb-4">
+                      <button class="btn">Follow</button>
+                    </div>
+                  </div>
+
+                  <div class="accordion mt-4">
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        Comments <i class="fas fa-chevron-down"></i>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center detail-comment">
+                          <div style="width: 32px; height: 32px">
+                            <img
+                              class="rounded-circle w-100 h-100"
+                              src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                              alt=""
+                            />
+                          </div>
+
+                          <div class="d-flex flex-column ml-2">
+                            <a href="">yuji</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="footer-comment-detail">
+                    <div
+                      class="d-flex justify-content-between align-items-center add-icon"
+                    >
+                      <p>1 comment</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="mr-2 icon-list">
+                          <i class="fas fa-heart"></i>
+                          <i class="fas fa-smile-beam"></i>
+                        </div>
+                        <div class="box-icon rounded-circle">
+                          <i class="fas fa-heart"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="add-text-comment d-flex justify-content-between align-items-center"
+                    >
+                      <div class="box-icon">
+                        <img
+                          class="rounded-circle w-100 h-100"
+                          src="https://i.pinimg.com/75x75_RS/9e/7e/69/9e7e69888e1485746c5302af6fb8bc26.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="flex-grow-1 add">
+                        <div class="h-100 d-flex align-items-center px-0 px-4">
+                          <div class="h-100 flex-grow-1">
+                            <input
+                              type="text"
+                              class="search h-100 w-100 fs-16 border-0 font-weight-normal"
+                              placeholder="Add a comment"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
