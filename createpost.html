@@ -662,6 +662,26 @@
 
         <div id="main">
           <div class="create-container-main">
+            <!-- <section class="start_create">
+              <div
+                class="section_wrapper d-flex justify-content-center align-items-center"
+              >
+                <div class="d-flex flex-column align-items-center">
+                  <div class="img_wrapper mb-3">
+                    <img src="./images//Newfolder/startCreatePin.jpg" alt="" />
+                  </div>
+                  <h1 class="mb-2">Start creating Pins</h1>
+                  <div class="text_wrapper mb-3">
+                    <p class="color-text-subtle">
+                      Drafts expire 30 days after you’ve first saved them. After
+                      that, they’re deleted.
+                    </p>
+                  </div>
+                  <button class="btn_style">Create new</button>
+                </div>
+              </div>
+            </section> -->
+
             <div
               class="d-flex justify-content-between align-items-center padding-x-12 top-nav"
             >
@@ -681,6 +701,7 @@
                     <div class="row">
                       <div class="col-lg-4">
                         <div
+                          id="file_input"
                           class="d-flex justify-content-center align-items-center position-relative radius-24 post-loader"
                         >
                           <input
@@ -842,14 +863,29 @@
     <!-- End PageWrapper -->
     <script>
       var loadFile = function (event) {
-        var image = document.getElementById('output');
+        const file = event.target.files[0];
+        if (file) {
+          const img = new Image();
+          img.src = URL.createObjectURL(file);
+
+          img.onload = function () {
+            const width = img.width;
+            const height = img.height;
+            // document.getElementById("file_input").style.height = height;
+            // document.getElementById("file_input").style.width = width;
+            $("#file_input").attr("width", `${width}px`);
+            $("#file_input").attr("height", `${height}px`);
+            console.log(`Image width: ${width}, height: ${height}`);
+          };
+        }
+        var image = document.getElementById("output");
         image.src = URL.createObjectURL(event.target.files[0]);
       };
       function openNav() {
-        document.getElementById('mySidebar').classList.toggle('active');
-        document.getElementById('tab-active').classList.toggle('active');
-        document.getElementById('abc').classList.toggle('active');
-        document.getElementById('main').classList.toggle('active');
+        document.getElementById("mySidebar").classList.toggle("active");
+        document.getElementById("tab-active").classList.toggle("active");
+        document.getElementById("abc").classList.toggle("active");
+        document.getElementById("main").classList.toggle("active");
       }
     </script>
     <script src="js/jquery.js"></script>
