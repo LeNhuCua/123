@@ -1,8 +1,51 @@
 .profile .profile-container .container-wrapper {
-  max-width: 488px; 
+  max-width: 488px;
 }
 .profile .profile-container .container-wrapper .profile-avatar {
-  width: 120px; height: 120px
+  width: 120px;
+  height: 120px;
 }
 
+.icon_wrapper {
+  margin: 0 14px;
+  padding: 0 14px;
+}
 
+.icon_wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.btn_style {
+  font-weight: 600;
+}
+
+.btn_red {
+  background-color: #e60022;
+  color: white;
+}
+
+.masonry_img {
+  width: 100%;
+  border-top: 1px solid #cdcdcd;
+  padding-top: 30px;
+}
+
+.grid ::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.grid .grid-sizer,
+.grid .grid-item {
+  width: 20%;
+}
+.grid .grid-item {
+  float: left;
+}
+.grid .grid-item img {
+  padding: 3px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}

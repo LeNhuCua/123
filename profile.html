@@ -16,12 +16,11 @@
 
     <!-- Stylesheet  -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/profile.css" rel="stylesheet" />
   </head>
 
   <body class="position-relative">
-    <div
-      id="overlay"
-    ></div>
+    <div id="overlay"></div>
 
     <header
       id="header"
@@ -509,16 +508,44 @@
               </svg>
               <span class="ml-2 detail-email">profile.html</span>
             </div>
-  
+
             <div class="mt-2">
               <span>0 following</span>
             </div>
-  
-            <div class="mt-4 d-flex justify-content-between">
-              <button class="btn-primary mr-2">Share</button>
-              <button class="btn-primary">Edit Profile</button>
+
+            <div class="mt-4 d-flex justify-content-between align-items-center">
+              <div class="icon_wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="14"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M246.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 109.3V320c0 17.7 14.3 32 32 32s32-14.3 32-32V109.3l73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 53 43 96 96 96H352c53 0 96-43 96-96V352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V352z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <button class="btn-primary btn_style mr-2">Share</button>
+                <button class="btn-primary btn_style btn_red">
+                  Edit Profile
+                </button>
+              </div>
+              <div class="icon_wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="14"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"
+                  />
+                </svg>
+              </div>
             </div>
-  
+
             <div class="mt-4 d-flex justify-content-between">
               <div class="tablink tab-active mr-4" data-city="Created">
                 Created
@@ -528,17 +555,20 @@
           </div>
         </div>
         <div id="Created" class="w3-container w3-border city">
-          <div class="list-container ">
+          <div class="list-container">
             <div class="position-relative">
               <div
                 class="window rounded-3 d-block mb-3 overflow-hidden position-relative"
               >
-                <a href="./detail.html" class="w-100 top-0 left-0 h-100 d-block">
+                <a
+                  href="./detail.html"
+                  class="w-100 top-0 left-0 h-100 d-block"
+                >
                   <img
                     class="foto w-100 h-100 rounded-3"
                     src="https://i.pinimg.com/236x/f9/25/3c/f9253cfeecf153581a24e9832c0d322b.jpg"
                 /></a>
-    
+
                 <div
                   class="position-absolute w-100 h-100 hover-zone d-flex align-content-between align-items-baseline"
                 >
@@ -573,11 +603,13 @@
                       Save
                     </a>
                   </div>
-    
+
                   <div
                     class="bottom-bar w-100 d-flex flex-column flex-xl-row justify-content-between align-items-center"
                   >
-                    <a target="_blank" href="3243" class="visit">↗ website.com</a>
+                    <a target="_blank" href="3243" class="visit"
+                      >↗ website.com</a
+                    >
                     <div class="radius-ico uploads mt-xl-0 mt-2">
                       <a
                         class="d-inline-flex justify-content-center align-items-center rounded-circle"
@@ -611,7 +643,7 @@
                         />
                       </div>
                     </div>
-    
+
                     <ul class="list-button-save">
                       <li class="new p-2 mt-3 radius-24">
                         <a
@@ -662,18 +694,20 @@
                 </div>
               </div>
             </div>
-    
-    
+
             <div class="position-relative">
               <div
                 class="window rounded-3 d-block mb-3 overflow-hidden position-relative"
               >
-                <a href="./detail.html" class="w-100 top-0 left-0 h-100 d-block">
+                <a
+                  href="./detail.html"
+                  class="w-100 top-0 left-0 h-100 d-block"
+                >
                   <img
                     class="foto w-100 h-100 rounded-3"
                     src="https://i.pinimg.com/236x/f9/25/3c/f9253cfeecf153581a24e9832c0d322b.jpg"
                 /></a>
-    
+
                 <div
                   class="position-absolute w-100 h-100 hover-zone d-flex align-content-between align-items-baseline"
                 >
@@ -708,11 +742,13 @@
                       Save
                     </a>
                   </div>
-    
+
                   <div
                     class="bottom-bar w-100 d-flex flex-column flex-xl-row justify-content-between align-items-center"
                   >
-                    <a target="_blank" href="3243" class="visit">↗ website.com</a>
+                    <a target="_blank" href="3243" class="visit"
+                      >↗ website.com</a
+                    >
                     <div class="radius-ico uploads mt-xl-0 mt-2">
                       <a
                         class="d-inline-flex justify-content-center align-items-center rounded-circle"
@@ -746,7 +782,7 @@
                         />
                       </div>
                     </div>
-    
+
                     <ul class="list-button-save">
                       <li class="new p-2 mt-3 radius-24">
                         <a
@@ -797,18 +833,20 @@
                 </div>
               </div>
             </div>
-    
-      
+
             <div class="position-relative">
               <div
                 class="window rounded-3 d-block mb-3 overflow-hidden position-relative"
               >
-                <a href="./detail.html" class="w-100 top-0 left-0 h-100 d-block">
+                <a
+                  href="./detail.html"
+                  class="w-100 top-0 left-0 h-100 d-block"
+                >
                   <img
                     class="foto w-100 h-100 rounded-3"
                     src="./images/Newfolder/n02089867_2388.jpg"
                 /></a>
-    
+
                 <div
                   class="position-absolute w-100 h-100 hover-zone d-flex align-content-between align-items-baseline"
                 >
@@ -843,11 +881,13 @@
                       Save
                     </a>
                   </div>
-    
+
                   <div
                     class="bottom-bar w-100 d-flex flex-column flex-xl-row justify-content-between align-items-center"
                   >
-                    <a target="_blank" href="3243" class="visit">↗ website.com</a>
+                    <a target="_blank" href="3243" class="visit"
+                      >↗ website.com</a
+                    >
                     <div class="radius-ico uploads mt-xl-0 mt-2">
                       <a
                         class="d-inline-flex justify-content-center align-items-center rounded-circle"
@@ -881,7 +921,7 @@
                         />
                       </div>
                     </div>
-    
+
                     <ul class="list-button-save">
                       <li class="new p-2 mt-3 radius-24">
                         <a
@@ -932,23 +972,64 @@
                 </div>
               </div>
             </div>
-    
-    
-    
-    
-    
-           
-           
           </div>
         </div>
-  
-        <div id="Share" class="w3-container w3-border city" style="display: none">
-          Saved
+
+        <div
+          id="Share"
+          class="w3-container w3-border city"
+          style="display: none"
+        >
+          <div class="masonry_img mt-5">
+            <div class="grid">
+              <div class="grid-sizer"></div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02087046_4851.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images//Newfolder/n02089867_2388.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_2409.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_5644.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02087046_4851.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images//Newfolder/n02089867_2388.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_2409.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_5644.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02087046_4851.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images//Newfolder/n02089867_2388.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_2409.jpg" />
+              </div>
+              <div class="grid-item">
+                <img src="./images/Newfolder/n02097047_5644.jpg" />
+              </div>
+            </div>
+            <!-- <div class="grid">
+              <div class="grid-item"></div>
+              <div class="grid-item grid-item--width2 grid-item--height2"></div>
+              <div class="grid-item grid-item--height3"></div>
+              <div class="grid-item grid-item--height2"></div>
+              <div class="grid-item grid-item--width3"></div>
+            </div> -->
+          </div>
         </div>
       </div>
-
-  
-  
     </main>
 
     <!-- End PageWrapper -->
@@ -957,7 +1038,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.marquee.min.js"></script>
     <script src="js/jquery-ui.js"></script>
-
+    <script src="./js//masonry.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
